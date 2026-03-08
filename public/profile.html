@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil użytkownika</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="palms" aria-hidden="true">
+    <div class="palm left"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+    <div class="palm right"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+  </div>
+  <div class="shell">
+    <header class="nav">
+      <div class="brand">Verdant Novel Library</div>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Hub</a>
+        <a class="nav-link" href="library.html">Lista Novelek</a>
+        <a class="nav-link" href="creator.html">Creator</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="admin.html">Admin</a>
+        <span id="navUserBox" class="nav-links"></span>
+      </nav>
+    </header>
+    <main class="page">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Profil użytkownika</h2>
+          <p>Profil z bio, avatarem i listą dodanych tytułów.</p>
+        </div>
+        <div id="profileWrap"></div>
+      </div>
+    </main>
+    <footer class="footer">Verdant Novel Library — fullstack edition.</footer>
+  </div>
+  <div id="toastStack" class="toast-stack"></div>
+  <script src="app.js"></script>
+</body>
+</html>

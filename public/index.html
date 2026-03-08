@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant Novel Library</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="palms" aria-hidden="true">
+    <div class="palm left"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+    <div class="palm right"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+  </div>
+  <div class="shell">
+    <header class="nav">
+      <div class="brand">Verdant Novel Library</div>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Hub</a>
+        <a class="nav-link" href="library.html">Lista Novelek</a>
+        <a class="nav-link" href="creator.html">Creator</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="admin.html">Admin</a>
+        <span id="navUserBox" class="nav-links"></span>
+      </nav>
+    </header>
+    <main class="page">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Verdant Novel Library</h2>
+          <p>Pełna wersja portalu z logowaniem, profilami, prawdziwą bazą SQLite, okładkami, rankingami tygodniowymi i miesięcznymi oraz rozdziałami.</p>
+        </div>
+
+    <section class="hero-main">
+      <div class="kicker">Fullstack Portal Edition</div>
+      <h1 class="hero-title">Verdant<br>Novel Library</h1>
+      <p class="hero-text">
+        To już jest wersja portalowa: konta, profile użytkowników, upload okładek, rozdziały jak na portalu,
+        prawdziwa baza danych SQLite oraz rankingi tygodniowe, miesięczne i all time.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="library.html">Wejdź do biblioteki</a>
+        <a class="btn-soft" href="creator.html">Otwórz creator</a>
+        <a class="btn-soft" href="dashboard.html">Zobacz dashboard</a>
+      </div>
+    </section>
+    <section id="homeStats" class="hub-grid" style="margin-top:18px"></section>
+    <section id="featuredWrap" class="hub-grid" style="margin-top:18px"></section>
+
+      </div>
+    </main>
+    <footer class="footer">Verdant Novel Library — fullstack edition.</footer>
+  </div>
+  <div id="toastStack" class="toast-stack"></div>
+  <script src="app.js"></script>
+</body>
+</html>

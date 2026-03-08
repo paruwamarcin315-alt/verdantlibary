@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun"></div>
+  <div class="palms" aria-hidden="true">
+    <div class="palm left"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+    <div class="palm right"><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span><span class="leaf"></span></div>
+  </div>
+  <div class="shell">
+    <header class="nav">
+      <div class="brand">Verdant Novel Library</div>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Hub</a>
+        <a class="nav-link" href="library.html">Lista Novelek</a>
+        <a class="nav-link" href="creator.html">Creator</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="admin.html">Admin</a>
+        <span id="navUserBox" class="nav-links"></span>
+      </nav>
+    </header>
+    <main class="page">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Dodaj lub edytuj light novelkę</h2>
+          <p>Rozbudowany creator z featured mode, uploadem okładki i edytorem rozdziałów.</p>
+        </div>
+
+    <div class="creator-grid">
+      <section class="form-panel panel">
+        <div class="topbar">
+          <h3 id="pageHeading">Dodaj light novelkę</h3>
+          <button class="tiny-btn" id="resetNovelBtn" type="button">Wyczyść formularz</button>
+        </div>
+        <form id="novelForm">
+          <div class="form-grid">
+            <div><label class="label" for="title">Tytuł</label><input id="title" type="text" required></div>
+            <div><label class="label" for="author">Autor</label><input id="author" type="text" required></div>
+            <div><label class="label" for="genre">Gatunek</label><input id="genre" type="text" required></div>
+            <div><label class="label" for="status">Status</label><select id="status"><option value="Gotowa">Gotowa</option><option value="W przygotowaniu">W przygotowaniu</option></select></div>
+            <div class="full"><label class="label" for="tags">Tagi</label><input id="tags" type="text" placeholder="magia, romans, mrok"></div>
+            <div class="full"><label class="label" for="link">Link do novelki / mangi</label><input id="link" type="url"></div>
+            <div class="full"><label class="label" for="description">Opis</label><textarea id="description" required></textarea></div>
+            <div><label class="label" for="coverUpload">Upload okładki</label><input id="coverUpload" type="file" accept="image/*"></div>
+            <div><label class="label" for="cover_url">URL okładki</label><input id="cover_url" type="text"></div>
+            <div class="full" id="coverPreview"></div>
+            <div class="full">
+              <label style="display:flex;align-items:center;gap:10px;color:#98572f;font-weight:800">
+                <input id="featured" type="checkbox" style="width:auto"> Ustaw jako wyróżnioną
+              </label>
+            </div>
+          </div>
+          <input type="hidden" id="editingId">
+          <div class="topbar" style="margin-top:18px">
+            <h3>Rozdziały</h3>
+            <button class="tiny-btn" id="addChapterBtn" type="button">+ Dodaj rozdział</button>
+          </div>
+          <div id="chaptersEditor" class="stats-grid"></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+            <button class="btn" id="saveNovelBtn" type="submit">Zapisz light novelkę</button>
+            <a class="btn-soft" href="library.html">Przejdź do listy</a>
+          </div>
+        </form>
+      </section>
+      <aside class="stats-panel panel">
+        <h3>Creator info</h3>
+        <p class="helper">Ta wersja używa prawdziwej bazy SQLite po stronie serwera i przechowuje okładki w folderze uploads.</p>
+      </aside>
+    </div>
+
+      </div>
+    </main>
+    <footer class="footer">Verdant Novel Library — fullstack edition.</footer>
+  </div>
+  <div id="toastStack" class="toast-stack"></div>
+  <script src="app.js"></script>
+</body>
+</html>
